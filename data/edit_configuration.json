@@ -1,0 +1,56 @@
+{
+  "site": {
+    "name": "CSViz",
+    "description": "The CSViz Demo App",
+    "url": "http://csviz.org",
+    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
+    "repository": "fraserxu/csviz"
+  },
+  "ui": {
+    "legend": false,
+    "choropleth": [
+      "#5B79AD",
+      "#6884B3",
+      "#6B87B4",
+      "#819BC3",
+      "#94AACB",
+      "#A7BAD2"
+    ],
+    "menu": [
+      {
+        "Financial": [
+          "GDP growth (annual %)"
+        ]
+      },
+      {
+        "Other": [
+          "World Population"
+        ]
+      }
+    ]
+  },
+  "columns": {
+    "Location": {
+      "type": "location",
+      "location_type": "country"
+    },
+    "Year": {
+      "type": "year"
+    },
+    "gdp_growth": {
+      "type": "number",
+      "precision" : 2,
+      "name": "GDP growth (annual %)",
+      "description": "Growth per year",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "GDP growth {{ currentIndicator }}%"
+    },
+    "world_population": {
+      "type": "number",
+      "description": "Population of country",
+      "name": "World Population",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "Population of country {{ currentIndicator }}"
+    }
+  }
+}
